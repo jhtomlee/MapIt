@@ -1,7 +1,7 @@
 app.controller('MainController', ['$scope', 'places', function($scope, places) {
   $scope.mapCenter = {
-    lat: 40.741934,
-    lng: -74.004897,
+    lat: 39.951860, //40.741934,
+    lng: -75.195130,//-74.004897,
     zoom: 17
   }
   places.success(function(data) {
