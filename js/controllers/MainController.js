@@ -37,5 +37,6 @@ app.controller('MainController', ['$scope', '$mdSidenav', '$location','places','
       $scope.geodata = data;
       $scope.mapMarkers = geodataToMarkers($scope.geodata);
     });
+    $location.path('/main')
   }; 
 }]);
