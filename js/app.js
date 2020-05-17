@@ -10,7 +10,8 @@ var app = angular.module(
 })
 
 // define app's routes:
-app.config(function ($routeProvider) { 
+app.config(function ($routeProvider, $mdThemingProvider) { 
+  
   $routeProvider 
     .when('/', { 
       controller: 'AboutController', 
@@ -27,4 +28,8 @@ app.config(function ($routeProvider) {
     .otherwise({ 
       redirectTo: '/about' 
     }); 
+
+  $mdThemingProvider.theme('default')
+    .primaryPalette('brown')
+    .accentPalette('red')
 });
