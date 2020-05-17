@@ -17,6 +17,11 @@ angular-material@^1.1.22:
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.22.tgz#d2d021deb0602c33843f739236efa5c1a08f077b"
   integrity sha512-GT8bDfKWj3xIzzYna+adhyim84B2KkqgXozyEZFAbA9yaDTKe4dV1gXA0SXzeCy0aWyVXwfrxrGt4nKjgVMi7g==
 
+angular-route@^1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.7.9.tgz#f9910a2af0ba3ad7a969c5dd369b8360d0d5e4ef"
+  integrity sha512-vRoj5hzdQtWbODhWJqDzD1iNOEfCKshO6GFBuPVV7RHlPjzIc4R2dHCc7Qiv/8F3LDxJDohc6vSnTDMLHuaqeA==
+
 angular@^1.7.9:
   version "1.7.9"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.9.tgz#e52616e8701c17724c3c238cfe4f9446fd570bc4"

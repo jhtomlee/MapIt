@@ -5,7 +5,9 @@ var app = angular.module(
 
   // dependencies
   ['ngRoute','leaflet-directive','ngMaterial']
-)
+).run(function(){
+  console.log('NearMeApp is ready!');
+})
 
 // define app's routes:
 app.config(function ($routeProvider) { 
