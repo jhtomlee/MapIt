@@ -10,8 +10,8 @@ app.controller('MainController', ['$scope', '$mdSidenav', '$location','places','
   $scope.startLocation = function() { 
 
     $scope.mapCenter = {
-      lat: 39.951860, //40.741934,
-      lng: -75.195130,//-74.004897,
+      lat: 39.951860, 
+      lng: -75.195130,
       zoom: 17
     }
     places.success(function(data) {
@@ -27,19 +27,15 @@ app.controller('MainController', ['$scope', '$mdSidenav', '$location','places','
     $scope.toggleSideBar();
     console.log(Number($scope.latitude), Number($scope.longitude))
     $scope.mapCenter = {
-      lat: Number($scope.latitude), //39.955002, 
-      lng:  Number($scope.longitude), //-75.200493,
+      lat: Number($scope.latitude), 
+      lng:  Number($scope.longitude), 
       zoom: 17
     }
     $scope.$apply();
-    $location.path('/main')
-    // searchPlaces.success(function(data) {
-    //   console.log("데이터 search by location: ", data)
-    //   $scope.geodata = data;
-    //   $scope.mapMarkers = geodataToMarkers($scope.geodata);
-      
-    //   // $scope.$apply();
-    //   $location.path('/main')
-    // });
+    searchPlaces.getAlgo($scope.mapCenter.lat, $scope.mapCenter.lng).success(function(data) {
+      console.log("데이터 search by location: ", data)
+      $scope.geodata = data;
+      $scope.mapMarkers = geodataToMarkers($scope.geodata);
+    });
   }; 
 }]);
