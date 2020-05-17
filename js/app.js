@@ -4,7 +4,7 @@ var app = angular.module(
   "NearMeApp", 
 
   // dependencies
-  ['ngRoute','leaflet-directive']
+  ['ngRoute','leaflet-directive','ngMaterial']
 )
 
 // define app's routes:
