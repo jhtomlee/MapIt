@@ -19,23 +19,47 @@
 
 </head>
 
-<body ng-app="NearMeApp">
+<body ng-app="NearMeApp" layout="column" ng-controller="MainController">
 
-  <md-toolbar>
+  <md-toolbar md-whiteframe="10">
     <div class="md-toolbar-tools">
-      <h1>MapIt</h1>
+      <h1> &nbsp&nbsp&nbsp&nbsp</h1>
+      <h1> MapIt</h1>
       <md-button>
         <a href="#/">About</a>
+      </md-button>
+      <md-button ng-click="toggleSideBar()">
+        Search
       </md-button>
     </div>
   </md-toolbar>
 
-  <div ng-view></div>
+  <div layout="row" flex>
+
+    <md-sidenav md-component-id="left">
+      <br><br><br><br><br>
+      <div layout="column">
+        <md-input-container>
+          <label>Latitude</label>
+          <input type="text" ng-model="latitude">
+        </md-input-container>
+        <md-input-container>
+          <label>Longitude</label>
+          <input type="text" ng-model="longitude">
+        </md-input-container>
+        <md-button class="md-primary" ng-click="searchLocation()">Search</md-button>
+      </div>
+    </md-sidenav>
+
+    <div ng-view></div>
+  </div>
+
 
   <!-- Modules -->
   <script src="js/app.js"></script>
 
   <!-- Controllers -->
+  <script src="js/controllers/SideController.js"></script>
   <script src="js/controllers/MainController.js"></script>
   <script src="js/controllers/AboutController.js"></script>
 
